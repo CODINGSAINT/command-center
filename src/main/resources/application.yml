@@ -1,3 +1,7 @@
 micronaut:
   application:
     name: commandCenter
+  server:
+    port: 8083
+    
+
