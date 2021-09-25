@@ -10,22 +10,22 @@ import reactor.core.publisher.Mono;
 
 import static com.codingsaint.configurations.CommandCenterConstants.*;
 
-@Client(SUPERHERO_URL)
+@Client(id="superHeroes")
 @Header(name = "Accept", value = HEADER_ACCEPT)
 public interface SuperheroClient {
     @Get("superheroes")
     Flux<Superhero> superheroes();
 
-    @Get("superhero/{id}")
+    @Get("/rx/superhero/{id}")
     Mono<Superhero> superheroesById(Long id);
 
-    @Post("/superhero")
+    @Post("/rx/superhero")
     Publisher<Superhero> create( @Body  Superhero superhero);
 
-    @Put("superhero")
+    @Put("/rx/superhero")
     Publisher<Superhero> update( Superhero superhero);
 
-    @Delete("superhero/{id}")
+    @Delete("/rx/superhero/{id}")
     Publisher<Long> delete(Long id);
 }
 

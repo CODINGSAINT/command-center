@@ -21,7 +21,7 @@ public class CommandCenterService {
 
     private final HttpClient client;
 
-    public CommandCenterService(@Client(SUPERHERO_URL) HttpClient client) {
+    public CommandCenterService(@Client(id="superHeroes") HttpClient client) {
         this.client = client;
     }
 
