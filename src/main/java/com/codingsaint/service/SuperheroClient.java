@@ -11,7 +11,7 @@ import reactor.core.publisher.Mono;
 
 import static com.codingsaint.configurations.CommandCenterConstants.*;
 
-@Client(SUPERHERO_URL)
+@Client(id = "superHeroes")
 @Header(name = "Accept", value = HEADER_ACCEPT)
 public interface SuperheroClient {
     @Get("/rx/superheroes")
