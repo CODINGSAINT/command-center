@@ -55,8 +55,7 @@ public class CommandCenterController {
                 .map(deleted -> deleted > 0 ? HttpResponse.noContent() : HttpResponse.notFound());*/
 
         return Mono
-                .from(client.delete(id))
-                .map(deleted -> deleted > 0 ? HttpResponse.noContent() : HttpResponse.notFound());
+                .from(client.delete(id));
     }
 
 
